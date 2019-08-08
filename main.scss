@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+}
+
+.people {
+  padding: 30px 20% 197px;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: repeat(3, 231px);
+  grid-gap: 40px 30px;
+  justify-items: center;
+}
+
+.person {
+  &:hover {
+    background: #eeeeee;
+    border-radius: 12px;
+    height: 345px;
+    z-index: 1;
+
+    .photo img {
+      display: block;
+      width: 240px;
+      height: 240px;
+      border-radius: 60px;
+      transition-duration: 1s;
+    }
+
+    .details .extra {
+      display: block;
+      font-size: 21.6px;
+      color: #000;
+      line-height: 25px;
+      margin-top: 11px;
+    }
+  }
+}
+
+.photo {
+  margin-bottom: 8px;
+  position: relative;
+
+  & img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  & .rank {
+    display: block;
+    width: 32px;
+    height: 32px;
+    color: #8b0000;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #fff;
+    position: absolute;
+    bottom: 84px;
+    right: 10px;
+    border-radius: 50%;
+  }
+}
+
+.details {
+  text-align: center;
+
+  & .name {
+    text-decoration: none;
+    color: #2f4f4f;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  & .extra {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .people {
+    padding: 30px 10% 197px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .people {
+    padding: 30px 5% 197px;
+  }
+}
+
+@media (max-width: 950px) {
+  .people {
+    padding: 30px 15% 197px;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(4, 231px);
+  }
+}
+
+@media (max-width: 950px) {
+  .people {
+    padding: 30px 10% 197px;
+  }
+}
+
+@media (max-width: 750px) {
+  .people {
+    padding: 30px 20% 155px;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(5, 231px);
+  }
+}
+
+@media (max-width: 610px) {
+  .people {
+    padding: 30px 4% 197px;
+  }
+}
+
+@media (max-width: 500px) {
+  .people {
+    padding: 30px 5% 155px;
+  }
+}
+
+@media (max-width: 300px) {
+  .people {
+    padding: 30px 20% 155px;
+    grid-template-columns: repeat(1, 200px);
+    grid-template-rows: repeat(10, 231px);
+  }
+}
